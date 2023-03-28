@@ -25,7 +25,7 @@ export class TodosComponent implements OnInit {
       },
       {
         sno:3,
-        title: 'List 2',
+        title: 'List 3',
         desc: "This is description of To-dolist",
         active: true
       }
@@ -34,6 +34,13 @@ export class TodosComponent implements OnInit {
 
   ngOnInit(): void {
     // Add initialization logic here
+  }
+
+  deleteTodo(todo:Todo){
+    console.log(todo);
+    const index = this.todos.indexOf(todo);
+    this.todos.splice(index, 1);
+
   }
 
 }
